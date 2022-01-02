@@ -1,25 +1,36 @@
 package aplicacao;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
+
+import entidades.Circulo;
+import entidades.Retangulo;
+import entidades.Shape;
 
 public class Programa {
 
 	public static void main(String[] args) {
-		//não é possível adicionar  a  esta lista do tipo curinga
+		List<Shape> myShapes = new ArrayList<>();
+		myShapes.add(new Retangulo(3.0, 2.0));
+		myShapes.add(new Circulo(2.0));
 		
-		List<Integer> myInts = Arrays.asList(5, 2, 10);
-		printList(myInts);
+		List<Circulo>meusCirculos = new ArrayList<Circulo>();
+		meusCirculos.add(new Circulo(2.0));
+		meusCirculos.add(new Circulo(3.0));
 		
-		List<String> myStrs = Arrays.asList("Maria", "Alex", "Bob");
-		printList(myStrs);
+		
+		
+		System.out.println("Total area: " + totalArea(meusCirculos));
+	}
+	
+	public static double totalArea(List<Shape> list) {
+		double sum = 0.0;
+		for (Shape s : list) {
+			sum += s.area();
 		}
-		public static void printList(List<?> list) {
-			list.add(3);
-		for (Object obj : list) {
-		System.out.println(obj);
+		return sum;
 		}
 
 	}
 
-}
+
