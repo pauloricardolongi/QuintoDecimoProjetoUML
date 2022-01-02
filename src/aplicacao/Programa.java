@@ -20,13 +20,14 @@ public class Programa {
 		
 		
 		
-		System.out.println("Total area: " + totalArea(myShapes));
+		System.out.println("Total area: " + totalArea(meusCirculos));
 	}
+	//uma lista de Shape podendo ser uma lista de qualquer tipo de subtipo de Shepe(Circulo)
 	
-	public static double totalArea(List<Shape> list) {
+	public static double totalArea(List<? extends Shape> list) {
 		double sum = 0.0;
 		for (Shape s : list) {
-			sum += s.area();
+			sum = sum + s.area();
 		}
 		return sum;
 		}
