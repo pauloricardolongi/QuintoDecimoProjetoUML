@@ -22,9 +22,10 @@ public class Programa {
 		
 		System.out.println("Total area: " + totalArea(meusCirculos));
 	}
-	//uma lista de Shape podendo ser uma lista de qualquer tipo de subtipo de Shepe(Circulo)
+	//com coringa delimitado não podemos adicionar elementos no método
 	
 	public static double totalArea(List<? extends Shape> list) {
+		list.add(new Circulo(2.3, 4.0));
 		double sum = 0.0;
 		for (Shape s : list) {
 			sum = sum + s.area();
