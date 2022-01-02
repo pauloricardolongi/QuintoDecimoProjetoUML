@@ -20,7 +20,7 @@ public class Programa {
 		
 		
 		
-		System.out.println("Total area: " + totalArea(meusCirculos));
+		System.out.println("Total area: " + totalArea(myShapes));
 	}
 	
 	public static double totalArea(List<Shape> list) {
