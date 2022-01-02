@@ -6,7 +6,7 @@ import java.util.List;
 public class Programa {
 
 	public static void main(String[] args) {
-		//com o tipo curinga podemos fazer métodos que recebem um genérico de qualquer tipo
+		//não é possível adicionar  a  esta lista do tipo curinga
 		
 		List<Integer> myInts = Arrays.asList(5, 2, 10);
 		printList(myInts);
@@ -15,6 +15,7 @@ public class Programa {
 		printList(myStrs);
 		}
 		public static void printList(List<?> list) {
+			list.add(3);
 		for (Object obj : list) {
 		System.out.println(obj);
 		}
